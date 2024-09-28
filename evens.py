@@ -1,6 +1,14 @@
 def even_number_of_evens(numbers):
-    return True
+    if isinstance(numbers,list):
 
+        evens = (sum([1 for n in numbers if n % 2 == 0]))
+
+        return True if evens and evens % 2 == 0 else False
+        
+        return evens % 2 == 0
+    else: 
+        raise TypeError("A list was not passed into the function")
+7
 
 if __name__ == '__main__':
     print(even_number_of_evens(5))
